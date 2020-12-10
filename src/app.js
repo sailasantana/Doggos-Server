@@ -18,7 +18,7 @@ app.use(cors())
 app.use(helmet())
 
 
-app.use('/', LoginRouter)
+app.use('/api', LoginRouter)
 
 app.get('/',  (req, res) => {
   res.send('Hello, world!')

@@ -5,21 +5,20 @@ const LoginRouter = express.Router()
 const { LoginService } = require('./login-service')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const loginService = require('./login-service')
 const db = require('../server')
 const app = express();
 
 
 
 LoginRouter
-    .route('api/login')
+    .route('/login')
     .post(bodyParser, (req,res,next) => {
     
     const { user_name, password } = req.body;
     const user = { user_name };
 
 
-    loginService.getUser(db, user)
+    LoginService.getUser(db, user)
     .then( result => {
 
         if(!result){
@@ -92,7 +91,7 @@ LoginRouter
                     lastName
                 }
 
-                loginService.addUser(
+                LoginService.addUser(
                     db, 
                     newUser
                 )
