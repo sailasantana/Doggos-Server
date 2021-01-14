@@ -2,14 +2,14 @@ const LoginService = {
     getUser(db, user){
         return db   
             .select('*')
-            .from('doggoUser')
+            .from('doggouser')
             .where(user)
             .then( result => {
                 return result[0]
             })
     },
     addUser(db, newUser){
-        return db('doggoUser')
+        return db('doggouser')
             .insert(newUser)
             .returning('*')
             .then(result => {

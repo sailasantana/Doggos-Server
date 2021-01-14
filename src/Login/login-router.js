@@ -5,7 +5,7 @@ const LoginRouter = express.Router()
 const { LoginService } = require('./login-service')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
-const db = require('../server')
+//const db = require('../server')
 const app = express();
 
 
@@ -18,7 +18,7 @@ LoginRouter
     const user = { user_name };
 
 
-    LoginService.getUser(db, user)
+    LoginService.getUser(req.app.get('db'), user)
     .then( result => {
 
         if(!result){
@@ -37,7 +37,7 @@ LoginRouter
         bcrypt.compare(password, result.password)
             .then( result => {
                 if(result){
-                    jwt.sign(sessionObj, 'secret', {expiresIn : '1m'}, (err, token) => {
+                    jwt.sign(sessionObj, 'secret', {expiresIn : '15m'}, (err, token) => {
                         if(!err){
                             return res.status(200).json({token})
                         }
@@ -56,10 +56,10 @@ LoginRouter
 })
 
 LoginRouter
-    .route('api/validate')
+    .route('/validate')
     .get( (req,res) => {
         const { session_token } = req.headers;
-    // console.log(req.headers)
+     console.log(req.headers)
 
         jwt.verify(session_token, 'secret', (err, tokenDecoded) => {
             if(err){
@@ -67,8 +67,10 @@ LoginRouter
             res.status(401).end()
         }
         else{
-            //console.log( tokenDecoded )
+            console.log( tokenDecoded )
 
+            //req.tokenDecoded = tokenDecoded
+            //you need a next here instead of 73-74
             return res.status(200).json({
                 message : 'Welcome back ${tokenDecoded.firstName}!'
             })
@@ -78,21 +80,21 @@ LoginRouter
 
 
  LoginRouter
-    .route('api/signup')
+    .route('/signup')
     .post(bodyParser, (req,res,next) => {
-        const { username, password , firstname, lastName } = req.body
+        const { user_name, password , first_name, last_name } = req.body
 
         bcrypt.hash(password, 10)
             .then( hashedPassword => {
                 const newUser = {
-                    username,
+                    user_name,
                     password : hashedPassword,
-                    firstname,
-                    lastName
+                    first_name,
+                    last_name
                 }
 
                 LoginService.addUser(
-                    db, 
+                    req.app.get('db'), 
                     newUser
                 )
                 .then( result => {

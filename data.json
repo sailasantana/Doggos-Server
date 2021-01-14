@@ -1,0 +1,1008 @@
+ 
+    {
+    "html_attributions": [],
+    "next_page_token": "ATtYBwIi8FB-LHl2P9jqZoRUU3uW7e-_AOxo68zWj53qvgLzcKXhqykHTwPq51Q12jArdu9wXra1fkOV_5ed9XoJYP3uUH2sQ5qEzNV4Z3PsZUtnwwLnEpD8dlwUZpvIWpcY-ZlCC4Z4puePzw5sju6qhsBvOurrO25lulCl7oIHkNPl8KWL6nhNMFTjnpkP3I1F8_pBHYItxssn0W3cljjPjzdZtbIKJ3HXKzA5FeW1vrpwIMy4RwydNHsLDNhrKUghxppSSC4sM0Aa_g_e0-W66GH2G9YXHdfCUjo58LnEuiLJOkZ6MbWjpwwdfym6jfRJJmUd5kj5u4YhAhKBRPd0W8sTtRvN38GJLYCCuXerjeQysEJvzKROh5QRYkOgWmVscjunwmAeO5OAjw_hPWECkPk0Y0Fk",
+    "results": [
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "41 1st Avenue, New York, NY 10003, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7243278,
+                "lng": -73.9879864
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.72562977989272,
+                   "lng": -73.98652012010727
+                },
+                "southwest": {
+                   "lat": 40.72293012010727,
+                   "lng": -73.98921977989271
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "d.b.a.",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 1280,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/105023165219170662300\">Steve Ginther</a>"
+                ],
+                "photo_reference": "ATtYBwKmQ5gEK9Df7_l0mMTlEqTP__GLLBQzb3P8lqKroxq4tk6Mrr1sUiPTq5P8-lt1TSViFGu5hlckxQ_y3o5j34J_K67wFEHYG5Q9RCKsC-RyzLr6yeuDF-E1QC_j5ZyJ4-GmiRcYTSqBRGX9WpKVe2XlRp3mMXzBYZl6I972zuP3XQnT",
+                "width": 622
+             }
+          ],
+          "place_id": "ChIJFTsuboNZwokRNAuw9taAIx4",
+          "plus_code": {
+             "compound_code": "P2F6+PR New York",
+             "global_code": "87G8P2F6+PR"
+          },
+          "price_level": 2,
+          "rating": 4.4,
+          "reference": "ChIJFTsuboNZwokRNAuw9taAIx4",
+          "types": [
+             "bar",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 534
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "303 Bedford Ave, Brooklyn, NY 11211, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7135273,
+                "lng": -73.9617525
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.71489602989272,
+                   "lng": -73.96047397010727
+                },
+                "southwest": {
+                   "lat": 40.71219637010727,
+                   "lng": -73.96317362989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Lucky Dog",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 1986,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/107222926279340248734\">Valerie Paxton</a>"
+                ],
+                "photo_reference": "ATtYBwK2nrmLcVsRtN3piNa1WScwuE66oyGltuuExVnwId4SH_kuZOe-SSFgDbfrPN5f9t6TyHcey1VvLGOapwraD2UrVL8aelIkNXcMVRpd4g8Ilcl3pP3R5r0aoHKJwxcX3GWn-q0RqnrVYen5uKLkGawjzONj_IL2Xnm1WXfIVcClE9sk",
+                "width": 2048
+             }
+          ],
+          "place_id": "ChIJ2VlVN2BZwokR59MK62zKjEk",
+          "plus_code": {
+             "compound_code": "P27Q+C7 Brooklyn, New York",
+             "global_code": "87G8P27Q+C7"
+          },
+          "price_level": 1,
+          "rating": 4.6,
+          "reference": "ChIJ2VlVN2BZwokR59MK62zKjEk",
+          "types": [
+             "bar",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 626
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "249 4th Ave, Brooklyn, NY 11215, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.6761867,
+                "lng": -73.9834314
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.67757862989272,
+                   "lng": -73.98223217010728
+                },
+                "southwest": {
+                   "lat": 40.67487897010728,
+                   "lng": -73.98493182989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Mission Dolores",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 1800,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/113057891292080942582\">Jesse Jack</a>"
+                ],
+                "photo_reference": "ATtYBwKAJZvbQavsjcKasaPnx1YJDU3OwYEz8Z07q1DmGdwSbxJqg2HECVQLhKTkPEV8GylTVoMqQXOG7grL-Fb2_umBjT4EMH0wa5eL5u-qheCsac9J7Zjr24JMw6HoLR0242SR5fINONif-2cXbDXkxi3zoHvCJ1yLHaFUnsrnpzNJcweL",
+                "width": 1440
+             }
+          ],
+          "place_id": "ChIJtR8VVlVawokRlCMiS11mEog",
+          "plus_code": {
+             "compound_code": "M2G8+FJ New York",
+             "global_code": "87G8M2G8+FJ"
+          },
+          "price_level": 2,
+          "rating": 4.5,
+          "reference": "ChIJtR8VVlVawokRlCMiS11mEog",
+          "types": [
+             "bar",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 427
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "147 Franklin St, Brooklyn, NY 11222, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7314951,
+                "lng": -73.9579832
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.73285062989272,
+                   "lng": -73.95657262010728
+                },
+                "southwest": {
+                   "lat": 40.73015097010727,
+                   "lng": -73.95927227989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Oak & Iron",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 1688,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/108987715130574965444\">A Google User</a>"
+                ],
+                "photo_reference": "ATtYBwL9dd9UhLtx9Sp80FnMumRX7T4PJtmPU4XCTkIh6LLHZf2EUjWuozxvkntlwq2qXnhAukjMTs7Kj4VpDb1VH9XMYAAllgt5_FTv0vttqzrq4bmiuN1ej-TZrpOFPYLjhwnn9o8EwlROhT_OiulxG0h3gm_Zm-pXOP8xx1vQLtVo0Go0",
+                "width": 3000
+             }
+          ],
+          "place_id": "ChIJ_Y2pdEBZwokRpicoQGSBN8o",
+          "plus_code": {
+             "compound_code": "P2JR+HR Brooklyn, New York",
+             "global_code": "87G8P2JR+HR"
+          },
+          "price_level": 1,
+          "rating": 4.4,
+          "reference": "ChIJ_Y2pdEBZwokRpicoQGSBN8o",
+          "types": [
+             "bar",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 84
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "338 3rd Avenue, 162 East 25th Street, New York, NY 10010, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.74010759999999,
+                "lng": -73.9824392
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.74146632989272,
+                   "lng": -73.98095272010728
+                },
+                "southwest": {
+                   "lat": 40.73876667010727,
+                   "lng": -73.98365237989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Dog & Bone",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 718,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/101273127226666316813\">A Google User</a>"
+                ],
+                "photo_reference": "ATtYBwJ-DmaMj1pO3kmjmNH24VdI33Dg3DHZUcyB4rCdg1u3KysqC9y-bQEOaxupcGyx_npPogkRqbpmM5e9TUHkDGtOSjKW7y1FojkhMVCADdWWldJL8cY5wV7co9VYJhnDMeCh8f1aqtSQy4OrOahCR6WhOR712uHhR5dywgxrWUmgH0vI",
+                "width": 1280
+             }
+          ],
+          "place_id": "ChIJubn0AgpZwokRxPHsHvoWvKk",
+          "plus_code": {
+             "compound_code": "P2R9+22 New York",
+             "global_code": "87G8P2R9+22"
+          },
+          "price_level": 2,
+          "rating": 4.2,
+          "reference": "ChIJubn0AgpZwokRxPHsHvoWvKk",
+          "types": [
+             "restaurant",
+             "bar",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 213
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "1678 3rd Ave, New York, NY 10128, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.784104,
+                "lng": -73.95045399999999
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.78538832989273,
+                   "lng": -73.94898997010728
+                },
+                "southwest": {
+                   "lat": 40.78268867010728,
+                   "lng": -73.95168962989271
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Barking Dog",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 3036,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/104502852186024076906\">Andrea Vicentin</a>"
+                ],
+                "photo_reference": "ATtYBwJOqIoVwS9_nBx6l39S8PagUz5GNOugOPO379xgOnQCWFJ7UTjcmERkppQqUp27jhQg2TMRBfwnVB1IoynSYi1qwK4cM5JN4s0O9cWwhY7Pho9KVB4PJIeUtltAxEWrP2_avJNcziBvbb0iAiPueokc0VLWy6ahlSYxR7wRoHcJ9J5x",
+                "width": 4048
+             }
+          ],
+          "place_id": "ChIJfWR-y6VYwokRWrgtJnJvfYU",
+          "plus_code": {
+             "compound_code": "Q2MX+JR New York",
+             "global_code": "87G8Q2MX+JR"
+          },
+          "price_level": 2,
+          "rating": 4.2,
+          "reference": "ChIJfWR-y6VYwokRWrgtJnJvfYU",
+          "types": [
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 730
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "195 Avenue A, New York, NY 10009, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.72924039999999,
+                "lng": -73.9813989
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.73056777989272,
+                   "lng": -73.97995872010729
+                },
+                "southwest": {
+                   "lat": 40.72786812010727,
+                   "lng": -73.98265837989274
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+          "name": "Boris & Horton",
+          "opening_hours": {
+             "open_now": false
+          },
+          "photos": [
+             {
+                "height": 4032,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/114290696883181775441\">RAM IMAGERY</a>"
+                ],
+                "photo_reference": "ATtYBwLQTLy9_82xkx3lAsBK5Dcijh44zhsyzPfnh3e58uZKvqPzMfmINgaCWFsOO2atqcxF8yH43AZNjuvq2zsE9bGJj62Y6BhQ3Pl_crpee-odYd6Dr6jnzIiupVCpeYxGJdnP47pyWTH_PtzuEQDdE1DKdWaSlMKDLraNttaVpRu-z2hm",
+                "width": 3024
+             }
+          ],
+          "place_id": "ChIJG6_BbHZZwokRS6lKU3rCUtk",
+          "plus_code": {
+             "compound_code": "P2H9+MC New York",
+             "global_code": "87G8P2H9+MC"
+          },
+          "rating": 4.7,
+          "reference": "ChIJG6_BbHZZwokRS6lKU3rCUtk",
+          "types": [
+             "cafe",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 392
+       },
+       {
+          "business_status": "CLOSED_TEMPORARILY",
+          "formatted_address": "757 Fulton St, Brooklyn, NY 11217, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.68641,
+                "lng": -73.974189
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.68768672989271,
+                   "lng": -73.97289682010728
+                },
+                "southwest": {
+                   "lat": 40.68498707010727,
+                   "lng": -73.97559647989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Habana Outpost",
+          "permanently_closed": true,
+          "photos": [
+             {
+                "height": 816,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/117150776928152730522\">A Google User</a>"
+                ],
+                "photo_reference": "ATtYBwJ5Jl4BcBzYuvLgwVZp052jGn64Smd9MY_R4ajE6sDMEfHMfYciv7sDzLRtM38IxlSh7jS8LxGAJhEsZYKfJZawc2GmNlPLnEmtT6mdpmaSM9JiHAsQraMdh-kcV_xQT6GSntL7tVY5xngwtepRnQOLKweNXSny4YymoICk_140vLI",
+                "width": 1224
+             }
+          ],
+          "place_id": "ChIJAywos7FbwokRmApnRqaSa9Q",
+          "plus_code": {
+             "compound_code": "M2PG+H8 Brooklyn, New York",
+             "global_code": "87G8M2PG+H8"
+          },
+          "price_level": 1,
+          "rating": 4.4,
+          "reference": "ChIJAywos7FbwokRmApnRqaSa9Q",
+          "types": [
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 1199
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "105 Freeman St, Brooklyn, NY 11222, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7343778,
+                "lng": -73.9575167
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.73564502989272,
+                   "lng": -73.95615442010728
+                },
+                "southwest": {
+                   "lat": 40.73294537010727,
+                   "lng": -73.95885407989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Bakeri",
+          "opening_hours": {
+             "open_now": false
+          },
+          "photos": [
+             {
+                "height": 3024,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/113346856597259937088\">Matthew McCann</a>"
+                ],
+                "photo_reference": "ATtYBwLQOw9CGtbMxrPk8LAQybOncRC5-B1LuM1Uy13qIgcSkDMOS8qD_TOFUqg7lttaYG5PrhylmUpctrlP9UaDtfnSvsXk5ndgO19yLEK1igZVI_tQTgR2LllLi4lTE0xR4Mst9IcVUuW7AxTtH9liXFwmby7CY05dV2ABFWBzfRuxWaVN",
+                "width": 4032
+             }
+          ],
+          "place_id": "ChIJ49tITD5ZwokRBDmxrKCTBLc",
+          "plus_code": {
+             "compound_code": "P2MR+QX Brooklyn, New York",
+             "global_code": "87G8P2MR+QX"
+          },
+          "price_level": 2,
+          "rating": 4.5,
+          "reference": "ChIJ49tITD5ZwokRBDmxrKCTBLc",
+          "types": [
+             "bakery",
+             "food",
+             "point_of_interest",
+             "store",
+             "establishment"
+          ],
+          "user_ratings_total": 311
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "3 Bleecker St, New York, NY 10012, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7254775,
+                "lng": -73.99261109999999
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.72677282989272,
+                   "lng": -73.99130077010727
+                },
+                "southwest": {
+                   "lat": 40.72407317010727,
+                   "lng": -73.99400042989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Von",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 3648,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/116649324419028441555\">Von</a>"
+                ],
+                "photo_reference": "ATtYBwLGYaJYSOF_Djp8AKTJbrAmS41VlwDtR1YzjUEYuh3SRLUwA07taBKoYxQ9ieAPYbJLAI2qR25iLrs6Ag9_B3Ueb6nHJl-nxkCFqYHJjT6b-41UnpNNj9A4cIRYu8QEDDIpfQV0VSxGJR8DddJWHNjBYWmCsO4Dmq-nl4STNj11uLN4",
+                "width": 5472
+             }
+          ],
+          "place_id": "ChIJOcgLF4VZwokR0Sk_RSn9sTo",
+          "plus_code": {
+             "compound_code": "P2G4+5X New York",
+             "global_code": "87G8P2G4+5X"
+          },
+          "price_level": 2,
+          "rating": 4.4,
+          "reference": "ChIJOcgLF4VZwokR0Sk_RSn9sTo",
+          "types": [
+             "bar",
+             "night_club",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 361
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "146 Beekman St, New York, NY 10038, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.707086,
+                "lng": -74.002481
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.70839812989271,
+                   "lng": -74.00117927010727
+                },
+                "southwest": {
+                   "lat": 40.70569847010727,
+                   "lng": -74.00387892989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Fresh Salt",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 3024,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/112871562287515673069\">Christopher Miranda</a>"
+                ],
+                "photo_reference": "ATtYBwK29bstvPnpYkobopndr0raGrKTSEBDON7fziPsaC8HkapXdiK0Y0V2BO2GAj_aXaqFcc-bUqR80SdN92PNhzncWN-4q6_QiSxvLLGkajYrDr-ZnupwxYGHthjQBPFvDw8VPjBrdFwloqAgctkdNqp_VoeC0EWMN4ewQu94SFOYn997",
+                "width": 4032
+             }
+          ],
+          "place_id": "ChIJN8ko6jxawokRh4mOVeF82dg",
+          "plus_code": {
+             "compound_code": "PX4X+R2 New York",
+             "global_code": "87G7PX4X+R2"
+          },
+          "price_level": 2,
+          "rating": 4.5,
+          "reference": "ChIJN8ko6jxawokRh4mOVeF82dg",
+          "types": [
+             "bar",
+             "cafe",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 359
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "480 Union St, Brooklyn, NY 11231, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.6795588,
+                "lng": -73.9889136
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.68099527989271,
+                   "lng": -73.98747567010727
+                },
+                "southwest": {
+                   "lat": 40.67829562010727,
+                   "lng": -73.99017532989271
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Pig Beach Brooklyn",
+          "opening_hours": {
+             "open_now": false
+          },
+          "photos": [
+             {
+                "height": 3024,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/108470810920941060465\">Jen Fraenkel</a>"
+                ],
+                "photo_reference": "ATtYBwLObg3T_0ODte3yeBcou8Nn-pHYpF6RplmmhaCa1HOPLLx8KtlHRtMZjJOq4JY796oWDZSdUDQPrnpH4WZzD5PjoYUymZRUP4URqTlT-Pc3CTXH91nVgJDlVOUruXfswDRwQfREEX730fetbPV_0tatZiWqyG7SUXgcKgMbEVnUabyg",
+                "width": 4032
+             }
+          ],
+          "place_id": "ChIJtULIhVZawokR8CQoGkBw_o4",
+          "plus_code": {
+             "compound_code": "M2H6+RC Brooklyn, New York",
+             "global_code": "87G8M2H6+RC"
+          },
+          "price_level": 2,
+          "rating": 4.4,
+          "reference": "ChIJtULIhVZawokR8CQoGkBw_o4",
+          "types": [
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 1652
+       },
+       {
+          "business_status": "CLOSED_TEMPORARILY",
+          "formatted_address": "60 Furman St, Brooklyn, NY 11201, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7023497,
+                "lng": -73.99559409999999
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.70360457989272,
+                   "lng": -73.99406262010729
+                },
+                "southwest": {
+                   "lat": 40.70090492010728,
+                   "lng": -73.99676227989274
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "The Osprey",
+          "permanently_closed": true,
+          "photos": [
+             {
+                "height": 1300,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/112859852808150840035\">A Google User</a>"
+                ],
+                "photo_reference": "ATtYBwKy9FQYSCqFtvxz-Uok4vJMDdloCwtwpOG7-sVJ5hA4CvbOGAjMR0BsognGmqfT7uecpdbkgai5f5b7YjEQZ7xyhZs077jJGR862PJAw2wSb447fZNnCFaG-o8Y8mXKKHCFN-YkBHkfBTtkv6Z13tAAclCxCPTw4y5b4kXaGEHfiBM2",
+                "width": 1300
+             }
+          ],
+          "place_id": "ChIJxWLy8DlawokR1jvfXUPSTUE",
+          "plus_code": {
+             "compound_code": "P223+WQ New York",
+             "global_code": "87G8P223+WQ"
+          },
+          "price_level": 3,
+          "rating": 4,
+          "reference": "ChIJxWLy8DlawokR1jvfXUPSTUE",
+          "types": [
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 172
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "1 Bleecker St, New York, NY 10003, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7254162,
+                "lng": -73.99243440000001
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.72671417989272,
+                   "lng": -73.99110897010728
+                },
+                "southwest": {
+                   "lat": 40.72401452010727,
+                   "lng": -73.99380862989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
+          "name": "Think Coffee",
+          "opening_hours": {
+             "open_now": false
+          },
+          "photos": [
+             {
+                "height": 4160,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/103483175089349594868\">Nolan McGarrah</a>"
+                ],
+                "photo_reference": "ATtYBwLMKwgU3tuk8XtQZ2WFpUiDtyfrYP5vyqqS6JQeZkizqblM77TXN6gSHGZpMp0n5nHfIUiEaAqIRjil9oUxo6T8l14isQJsBtCk24rrg_p070nf1vgP0sT6_XdAC8nmEJA17hzIiLbJTO9qosj0iz8FEtT8tnxOzSw7RJQ9W3q7JhrA",
+                "width": 3120
+             }
+          ],
+          "place_id": "ChIJ6fMuIIVZwokREpOIPZMzxWk",
+          "plus_code": {
+             "compound_code": "P2G5+52 New York",
+             "global_code": "87G8P2G5+52"
+          },
+          "price_level": 1,
+          "rating": 4.1,
+          "reference": "ChIJ6fMuIIVZwokREpOIPZMzxWk",
+          "types": [
+             "cafe",
+             "food",
+             "point_of_interest",
+             "store",
+             "establishment"
+          ],
+          "user_ratings_total": 393
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "1170 Nostrand Ave., Brooklyn, NY 11225, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.65891999999999,
+                "lng": -73.9506442
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.66027657989272,
+                   "lng": -73.94919452010728
+                },
+                "southwest": {
+                   "lat": 40.65757692010727,
+                   "lng": -73.95189417989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+          "name": "Daleview Biscuits and Beer",
+          "opening_hours": {
+             "open_now": false
+          },
+          "photos": [
+             {
+                "height": 960,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/110042998666239011066\">A Google User</a>"
+                ],
+                "photo_reference": "ATtYBwJ7igjzFOOBc8IC4gfB5UrirLV7g95x9bkafJeVGXAc66hC86v9mF3ehILuVv_GJRdwpt5PnP0fNd7Bb_udocMAfRAoX2IoXH6SaWrmgF6QQkVORxZHtlGpP1I2qDwUr3UcUdP035TbU7CH8fAXovdaPWPgZvqzkRgGhMsSi-F6S5Ln",
+                "width": 960
+             }
+          ],
+          "place_id": "ChIJrWvygQ1bwokRiQXY44IHWZ8",
+          "plus_code": {
+             "compound_code": "M25X+HP New York",
+             "global_code": "87G8M25X+HP"
+          },
+          "rating": 4.7,
+          "reference": "ChIJrWvygQ1bwokRiQXY44IHWZ8",
+          "types": [
+             "cafe",
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "store",
+             "establishment"
+          ],
+          "user_ratings_total": 76
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "225 S 1st St, Brooklyn, NY 11211, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7130051,
+                "lng": -73.9589373
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.71429377989271,
+                   "lng": -73.95760077010728
+                },
+                "southwest": {
+                   "lat": 40.71159412010727,
+                   "lng": -73.96030042989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Juanchi's Burger",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 3264,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/105431744997684740650\">Juanchi&#39;s Burger</a>"
+                ],
+                "photo_reference": "ATtYBwJ71kS36NrydSMEv5PYOXKcIFNnc-HsWBkbeldl4JSvLg6Hs-_ZTya8XsTvvzLtCruv4nGf5sjNJuLt-hk8-4hD_psestO1v7Tc0yNWNCkQRPi51XCiwoJYozP18-4dOOLVsYVCW_-M1jl8fi2ut8MSQl0lpAPKaZFvozHAC8IPUNl6",
+                "width": 2448
+             }
+          ],
+          "place_id": "ChIJ59_K5V9ZwokRtzTMm9ONQJc",
+          "plus_code": {
+             "compound_code": "P27R+6C Brooklyn, New York",
+             "global_code": "87G8P27R+6C"
+          },
+          "rating": 4.6,
+          "reference": "ChIJ59_K5V9ZwokRtzTMm9ONQJc",
+          "types": [
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 461
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "161 Montrose Ave, Brooklyn, NY 11206, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7075306,
+                "lng": -73.9427778
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.70881082989272,
+                   "lng": -73.94140262010728
+                },
+                "southwest": {
+                   "lat": 40.70611117010728,
+                   "lng": -73.94410227989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "duckduck",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 4048,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/113587332001662428755\">Jesaca Lin</a>"
+                ],
+                "photo_reference": "ATtYBwKfqjxio4BYOKHf6fqrp0K9yR3WV74TSbxtuARC-p37UVo24p9bDjfkYus4vjcPhJL8EI2veGsFTiclpeG9ASs_K-BscR48HykVK7wTgBXIqOoOmnCFruDKnCZpnJx3PrXc5mvCQOrXbLpkZYcIFJD81dM35G1FM6XKesiQuBByz_fn",
+                "width": 3036
+             }
+          ],
+          "place_id": "ChIJLxnTzP1bwokRGb5kO2TucFQ",
+          "plus_code": {
+             "compound_code": "P354+2V Brooklyn, New York",
+             "global_code": "87G8P354+2V"
+          },
+          "price_level": 1,
+          "rating": 4.4,
+          "reference": "ChIJLxnTzP1bwokRGb5kO2TucFQ",
+          "types": [
+             "bar",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 359
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "970 Flushing Ave, Brooklyn, NY 11206, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7031416,
+                "lng": -73.9323502
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.70456697989272,
+                   "lng": -73.93102037010728
+                },
+                "southwest": {
+                   "lat": 40.70186732010728,
+                   "lng": -73.93372002989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Forrest Point",
+          "photos": [
+             {
+                "height": 3024,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/114040609514331074608\">Alexia Olano</a>"
+                ],
+                "photo_reference": "ATtYBwK__wnCnSKy13xNg62fuu8912k-xJphUjkEUS7dyEEE8gnZTV47LJ3bAvKzct8LXgZcP1K_cGhGkRVUMwxEjd9yd8bCksXfDBwvSu4kNnQa9QwlmBHMauYn-APbwOjqX0k3gj-ci15jFzFgaN-TDrbY3hS4gCJEQqCAfIYMA8gSOlmc",
+                "width": 4032
+             }
+          ],
+          "place_id": "ChIJQ6yL0QZcwokRTEbR6spWISE",
+          "plus_code": {
+             "compound_code": "P339+73 New York",
+             "global_code": "87G8P339+73"
+          },
+          "price_level": 2,
+          "rating": 4.3,
+          "reference": "ChIJQ6yL0QZcwokRTEbR6spWISE",
+          "types": [
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 689
+       },
+       {
+          "business_status": "OPERATIONAL",
+          "formatted_address": "383 Carroll St, Brooklyn, NY 11231, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.6786417,
+                "lng": -73.9897538
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.67990712989272,
+                   "lng": -73.98846177010728
+                },
+                "southwest": {
+                   "lat": 40.67720747010728,
+                   "lng": -73.99116142989273
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
+          "name": "Lavender Lake Bar",
+          "opening_hours": {
+             "open_now": true
+          },
+          "photos": [
+             {
+                "height": 1080,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/110593659527565950138\">Lorraine Gates</a>"
+                ],
+                "photo_reference": "ATtYBwLeKlMIgDf3GngLNCMCwVrd24lJjnlXMaAey3WTdXDznVsxf1vr9Gq9eIufDcgPn9_KoWaJ33VghEznAM_cb4mqMDywvOyI2eumCp0lEce2qTt74QhkIiAoLdqCcpDV1ypkIvwad2CBqW9kCAXVBglu1eMejXm_B88BT3V6Oh53OzbV",
+                "width": 1080
+             }
+          ],
+          "place_id": "ChIJHUdGaVZawokRLeKx6cf6Il4",
+          "plus_code": {
+             "compound_code": "M2H6+F3 Brooklyn, New York",
+             "global_code": "87G8M2H6+F3"
+          },
+          "price_level": 2,
+          "rating": 4.3,
+          "reference": "ChIJHUdGaVZawokRLeKx6cf6Il4",
+          "types": [
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 494
+       },
+       {
+          "business_status": "CLOSED_TEMPORARILY",
+          "formatted_address": "94 Avenue A, New York, NY 10009, United States",
+          "geometry": {
+             "location": {
+                "lat": 40.7254181,
+                "lng": -73.9835968
+             },
+             "viewport": {
+                "northeast": {
+                   "lat": 40.72683507989272,
+                   "lng": -73.98240222010728
+                },
+                "southwest": {
+                   "lat": 40.72413542010727,
+                   "lng": -73.98510187989272
+                }
+             }
+          },
+          "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
+          "name": "Sidewalk",
+          "permanently_closed": true,
+          "photos": [
+             {
+                "height": 2806,
+                "html_attributions": [
+                   "<a href=\"https://maps.google.com/maps/contrib/117808460219123378764\">Ruwan J.</a>"
+                ],
+                "photo_reference": "ATtYBwKTQHeQ3x9G_Te3FZksndaB-ydRaYElY-uvIlzgn2QljIAL_R7FK-ueUVRZcmmzlqNnMCLRCY46JcXK_al7npMBNCFx4R_ABrDiGvQKLEvfGTt5W9rlqDJT5mfU7R-KJp6eginFFEfObf-qCD3NytKAOF1Lz7HwBufeCT49f4FDzmHh",
+                "width": 2234
+             }
+          ],
+          "place_id": "ChIJjRS-soJZwokRyvvVRspU2jI",
+          "plus_code": {
+             "compound_code": "P2G8+5H New York",
+             "global_code": "87G8P2G8+5H"
+          },
+          "price_level": 1,
+          "rating": 4,
+          "reference": "ChIJjRS-soJZwokRyvvVRspU2jI",
+          "types": [
+             "cafe",
+             "bar",
+             "restaurant",
+             "food",
+             "point_of_interest",
+             "establishment"
+          ],
+          "user_ratings_total": 327
+       }
+    ],
+    "status": "OK"
+  }
+
+
+  
