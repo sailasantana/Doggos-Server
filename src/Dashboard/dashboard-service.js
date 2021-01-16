@@ -1,11 +1,10 @@
 const DashboardService = {
 
-    getBoard(db,username){
+    getBoard(db,user_name){
         return db
             .select('*')
-            .from('user-board')
-            .where({username})
-            .returning('*')
+            .from('userdashboard')
+            .where({user_name})
             
 
     },
@@ -13,16 +12,19 @@ const DashboardService = {
     postToBoard(db, business){
         return db   
             .insert(business)
-            .into('user-board')
+            .into('userdashboard')
             .returning('*')
             .then(result => {
                 return result[0]
             })
 
     },
+    
 
     deleteFromBoard(db,id){
-        return db   
+        return db  
+            .select('*')
+            .from('userdashboard')               
             .where({id})
             .delete()
     }

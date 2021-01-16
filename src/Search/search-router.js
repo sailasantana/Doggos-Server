@@ -7,10 +7,8 @@ const fetch = require('node-fetch')
 
 
 function formatQueryParams(params){
-    console.log(5)
     const queryItems = Object.keys(params)
                     .map(key => `${(key)}=${(params[key])}`)
-    console.log(6)
     return queryItems.join('&');
 }
 
@@ -23,24 +21,20 @@ return   {
 
 SearchRouter
     .route('/search')
-    .get(bodyParser, (req,res,next) => {
+    .post(bodyParser, (req,res,next) => {
 
-        console.log(1)
         const { zip, type } = req.body;
 
 
-        console.log(2)
        
         const baseUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
         //?key=AIzaSyAZ9e8yrmg_qJFoBB7Giz4ZKzQNPl7fDm4&query=dog  friendly bars in zip code 11201'
         const key = process.env.key
 
-        console.log(3)
 
 
         const params = getPlaces(zip, type)
         const queryString = formatQueryParams(params)
-        console.log(2)
         //console.log(queryString)
         const url = baseUrl + '?' + queryString;
             console.log(url)

@@ -10,6 +10,7 @@ const { NODE_ENV } = require('./config')
 
 const LoginRouter = require('./Login/login-router')
 const SearchRouter = require('./Search/search-router')
+const DashboardRouter = require('./Dashboard/dashboard-router')
 const app = express()
 
 
@@ -22,6 +23,8 @@ app.use(helmet())
 
 app.use('/api', LoginRouter)
 app.use('/api', SearchRouter)
+app.use('/api', DashboardRouter)
+
 
 
 

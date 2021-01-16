@@ -1,17 +1,17 @@
 const express = require('express')
 const DashboardRouter = express.Router()
 const bodyParser = express.json()
-const { DashboardService } = require('dashboard-router')
+const { DashboardService } = require('./dashboard-service')
 const app = require('../app')
 
 
 DashboardRouter
-    .route('/:username/dashboard')
+    .route('/:user_name/dashboard')
     .get((req,res,next) => {
 
-        const {username} = req.params
+         let {user_name} = req.params
 
-        if(!username){
+        if(!user_name){
             return res.status(404).json({error:{
                 message: `User Not Found`
             }})
@@ -19,7 +19,7 @@ DashboardRouter
 
         DashboardRouter(
             req.app.get('db'),
-            req.params.username
+            req.params.user_name
 
         )
         .then( dashboard => {
@@ -30,10 +30,15 @@ DashboardRouter
     })
     .post(bodyParser, (req,res,next) => {
 
-        const title = req.body.title
-        const doggoAddress = req.body.address
+       const {title, doggoaddress} = req.body
+       const  user_name  = req.params.user_name
 
-        const business = { title, doggoAddress }
+
+        // const title = req.body.title
+        // const doggoaddress = req.body.address
+        const business = { title, doggoaddress, user_name }
+
+        console.log(business)
 
         for (const [key,value] of Object.entries(business)){
             if(value == null){
@@ -41,7 +46,6 @@ DashboardRouter
                     message: `Missing ${key} in request body`
                 }});
             }
-
         DashboardService.postToBoard(
             req.app.get('db'),
             business
@@ -54,12 +58,11 @@ DashboardRouter
         })
         .catch(next);
        }
-
     })
     
     
     DashboardRouter
-    .route('/:username/dashboard/:id')
+    .route('/:user_name/dashboard/:id')
     .delete((req,res,next) => {
         
         const {id} = req.params
@@ -79,3 +82,5 @@ DashboardRouter
         .catch(next);
 
     })
+
+    module.exports = DashboardRouter;
