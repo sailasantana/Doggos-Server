@@ -1,8 +1,7 @@
 const express = require('express')
-const SearchRouter = express.Router()
+const DetailsRouter = express.Router()
 const bodyParser = express.json()
 const fetch = require('node-fetch')
-
 
 
 function formatQueryParams(params){
@@ -11,28 +10,28 @@ function formatQueryParams(params){
     return queryItems.join('&');
 }
 
-function getPlaces(zip, type){
+function getPlaces(place_id){
 return   {
     key: process.env.key, 
-    query : `dog friendly ${type} in zip code ${zip}`
+    fields: "name,reviews,website,formatted_phone_number",
+    place_id : place_id
  }
 }
 
-SearchRouter
-    .route('/search')
-    .post(bodyParser, (req,res,next) => {
+DetailsRouter
+    .route('/details/:place_id')
+    .get( (req,res,next) => {
 
-        const { zip, type } = req.body;
+        const { place_id } = req.params;
 
 
        
-        const baseUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-        //?key=AIzaSyAZ9e8yrmg_qJFoBB7Giz4ZKzQNPl7fDm4&query=dog  friendly bars in zip code 11201'
+        const baseUrl = 'https://maps.googleapis.com/maps/api/place/details/json'
         const key = process.env.key
 
 
 
-        const params = getPlaces(zip, type)
+        const params = getPlaces(place_id)
         const queryString = formatQueryParams(params)
         //console.log(queryString)
         const url = baseUrl + '?' + queryString;
@@ -59,12 +58,14 @@ SearchRouter
 
 
 
-        module.exports = SearchRouter;
+        module.exports = DetailsRouter;
 
 
       
     
   
+
+
 
 
 

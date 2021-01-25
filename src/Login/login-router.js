@@ -59,7 +59,6 @@ LoginRouter
     .route('/validate')
     .get( (req,res) => {
         const { session_token } = req.headers;
-     console.log(req.headers)
 
         jwt.verify(session_token, 'secret', (err, tokenDecoded) => {
             if(err){

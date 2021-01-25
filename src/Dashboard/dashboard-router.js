@@ -17,7 +17,7 @@ DashboardRouter
             }})
         }
 
-        DashboardRouter(
+        DashboardService.getBoard(
             req.app.get('db'),
             req.params.user_name
 
@@ -30,6 +30,7 @@ DashboardRouter
     })
     .post(bodyParser, (req,res,next) => {
 
+        console.log('test')
        const {title, doggoaddress} = req.body
        const  user_name  = req.params.user_name
 
@@ -46,6 +47,7 @@ DashboardRouter
                     message: `Missing ${key} in request body`
                 }});
             }
+        }  
         DashboardService.postToBoard(
             req.app.get('db'),
             business
@@ -58,7 +60,7 @@ DashboardRouter
         })
         .catch(next);
        }
-    })
+    )
     
     
     DashboardRouter
