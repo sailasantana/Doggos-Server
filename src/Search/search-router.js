@@ -27,7 +27,6 @@ SearchRouter
 
        
         const baseUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-        //?key=AIzaSyAZ9e8yrmg_qJFoBB7Giz4ZKzQNPl7fDm4&query=dog  friendly bars in zip code 11201'
         const key = process.env.key
 
 
