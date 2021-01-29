@@ -10,15 +10,15 @@ function validateToken(req,res,next) {
             res.statusMessage = "Not Authoried"
             res.status(401).end()
         }
-        else{
-            
-            const user = {
-                tokenDecoded: tokenDecoded
-            }
+            else{
+                
+                const user = {
+                    tokenDecoded: tokenDecoded
+                }
 
-            req.user = user 
+                req.user = user 
 
-            next();
+                next();
 
           
         }

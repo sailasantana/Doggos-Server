@@ -2,8 +2,11 @@ const express = require('express')
 const SearchRouter = express.Router()
 const bodyParser = express.json()
 const fetch = require('node-fetch')
+const zipcodes = require('zipcodes')
 
-
+// zip = 'a'
+// let example = zipcodes.lookup(zip)
+// console.log(example)
 
 function formatQueryParams(params){
     const queryItems = Object.keys(params)
@@ -23,15 +26,23 @@ SearchRouter
     .post(bodyParser, (req,res,next) => {
 
         const { zip, type } = req.body;
-
-
-       
         const baseUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
         const key = process.env.key
 
+        if(zipcodes.lookup(req.body.zip) == undefined){
+            
+            res.statusMessage = "Invalid Zip Code"
+            return res.status(401).end()
+        }
 
+        else { 
+            const params = getPlaces(zip, type)
+             
+        }
 
         const params = getPlaces(zip, type)
+
+
         const queryString = formatQueryParams(params)
         //console.log(queryString)
         const url = baseUrl + '?' + queryString;
