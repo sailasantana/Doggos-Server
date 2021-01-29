@@ -2,10 +2,15 @@
   "name": "capstone-2-client-v2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js"
+    "start": "node server.js",
+    "migrate": "postgrator --config postgrator-config.js",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku master",
+    "postdeploy": "npm run migrate:production",
+    "migrate:production": "env SSL=true NODE_TLS_REJECT_UNAUTHORIZED=0 DATABASE_URL=$(heroku config:get DATABASE_URL) npm run migrate"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +26,7 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "pg": "^8.5.1",
-    "zipcodes": "^8.0.0"
+    "zipcodes": "^8.0.0",
+    "postgrator-cli": "^3.2.0"
   }
 }
