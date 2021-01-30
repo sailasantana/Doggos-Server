@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node src/server.js",
     "migrate": "postgrator --config postgrator-config.js",
     "predeploy": "npm audit",
     "deploy": "git push heroku master",
@@ -26,7 +26,8 @@
     "morgan": "^1.10.0",
     "node-fetch": "^2.6.1",
     "pg": "^8.5.1",
-    "zipcodes": "^8.0.0",
-    "postgrator-cli": "^3.2.0"
+    "postgrator": "^4.1.1",
+    "postgrator-cli": "^3.2.0",
+    "zipcodes": "^8.0.0"
   }
 }
