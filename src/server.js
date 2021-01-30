@@ -16,7 +16,7 @@ app.set('db', db);
 
 
 app.listen(PORT, () => {
-    console.log(`Server is listening on port ${PORT}`)
-})
+  console.log(`Server listening at http://localhost:${PORT}`) });
+
 
 //module.exports = db
