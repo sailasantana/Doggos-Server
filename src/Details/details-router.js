@@ -12,7 +12,7 @@ function formatQueryParams(params){
 
 function getPlaces(place_id){
 return   {
-    key: process.env.key, 
+    key: process.env.KEY, 
     fields: "name,reviews,website,formatted_phone_number",
     place_id : place_id
  }
@@ -27,7 +27,7 @@ DetailsRouter
 
        
         const baseUrl = 'https://maps.googleapis.com/maps/api/place/details/json'
-        const key = process.env.key
+        const key = process.env.KEY
 
 
 

@@ -16,7 +16,7 @@ function formatQueryParams(params){
 
 function getPlaces(zip, type){
 return   {
-    key: process.env.key, 
+    key: process.env.KEY, 
     query : `dog friendly ${type} in zip code ${zip}`
  }
 }
@@ -27,7 +27,7 @@ SearchRouter
 
         const { zip, type } = req.body;
         const baseUrl = 'https://maps.googleapis.com/maps/api/place/textsearch/json'
-        const key = process.env.key
+        const key = process.env.KEY
 
         if(zipcodes.lookup(req.body.zip) == undefined){
             
