@@ -22,8 +22,10 @@ app.use(morgan((NODE_ENV === 'production') ? 'tiny' : 'common', {
 app.use(cors())
 app.use(helmet())
 app.get('/',  (req, res) => {
-  res.send('Hello, world!')
+  res.send('Welcome to the DoggosWelcome API!')
 })
+
+
 
 app.get( '/validate', validateToken, (req, res) => {
   return res.status(200).json({});

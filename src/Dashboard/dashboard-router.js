@@ -30,16 +30,11 @@ DashboardRouter
     })
     .post(bodyParser, (req,res,next) => {
 
-        console.log('test')
        const {title, doggoaddress} = req.body
        const  user_name  = req.params.user_name
 
+       const business = { title, doggoaddress, user_name }
 
-        // const title = req.body.title
-        // const doggoaddress = req.body.address
-        const business = { title, doggoaddress, user_name }
-
-        console.log(business)
 
         for (const [key,value] of Object.entries(business)){
             if(value == null){

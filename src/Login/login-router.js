@@ -32,7 +32,6 @@ LoginRouter
             lastName : result.lastName
         }
 
-        //console.log(sessionObj)
 
         bcrypt.compare(password, result.password)
             .then( result => {
@@ -55,27 +54,28 @@ LoginRouter
 
 })
 
-LoginRouter
-    .route('/validate')
-    .get( (req,res) => {
-        const { session_token } = req.headers;
+/* Moved to middleware */
+// LoginRouter
+//     .route('/validate')
+//     .get( (req,res) => {
+//         const { session_token } = req.headers;
 
-        jwt.verify(session_token, 'secret', (err, tokenDecoded) => {
-            if(err){
-            res.statusMessage = "Not Authoried"
-            res.status(401).end()
-        }
-        else{
-            console.log( tokenDecoded )
+//         jwt.verify(session_token, 'secret', (err, tokenDecoded) => {
+//             if(err){
+//             res.statusMessage = "Not Authoried"
+//             res.status(401).end()
+//         }
+//         else{
+//             console.log( tokenDecoded )
 
-            //req.tokenDecoded = tokenDecoded
-            //you need a next here instead of 73-74
-            return res.status(200).json({
-                message : 'Welcome back ${tokenDecoded.firstName}!'
-            })
-        }
-    })
-    })
+//             //req.tokenDecoded = tokenDecoded
+//             //you need a next here instead of 73-74
+//             return res.status(200).json({
+//                 message : 'Welcome back ${tokenDecoded.firstName}!'
+//             })
+//         }
+//     })
+//     })
 
 
  LoginRouter
@@ -83,14 +83,35 @@ LoginRouter
     .post(bodyParser, (req,res,next) => {
         const { user_name, password , first_name, last_name } = req.body
 
-        bcrypt.hash(password, 10)
-            .then( hashedPassword => {
-                const newUser = {
-                    user_name,
-                    password : hashedPassword,
-                    first_name,
-                    last_name
+        for (const field of ['user_name', 'password', 'first_name', 'last_name']) {
+            if (!req.body[field]) {
+                return res.status(400).json({error: `Missing '${field}' in request body.`});
+            }
+        }
+
+        const passwordChecker =  LoginService.validatePassword(password);
+
+        if (passwordChecker) {
+            return res.status(400).json({error: passwordChecker});
+        }
+
+        LoginService.hasDuplicateUser(
+            req.app.get('db'),
+            user_name
+        )
+            .then(hasDuplicateUser => {
+                if (hasDuplicateUser) {
+                    return res.status(400).json({error: `Username already taken.`});
                 }
+
+                bcrypt.hash(password, 10)
+                    .then( hashedPassword => {
+                        const newUser = {
+                            user_name,
+                            password : hashedPassword,
+                            first_name,
+                            last_name
+                        }
 
                 LoginService.addUser(
                     req.app.get('db'), 
@@ -101,7 +122,10 @@ LoginRouter
                 })
                 .catch(next);
         })
+    })
+
 })
+
 
 
 module.exports = LoginRouter;
