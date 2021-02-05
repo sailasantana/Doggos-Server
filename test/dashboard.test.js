@@ -25,7 +25,7 @@ describe ('Dashboard Endpoints', function() {
 
     afterEach('cleanup first table', () => db.raw('TRUNCATE TABLE userdashboard RESTART IDENTITY;'))
 
-    afterEach('cleanup second table', () => db('doggouser').delete());
+    //afterEach('cleanup second table', () => db('doggouser').delete());
 
     //GET tests
     context ('Given there are spots saved in the db', () => {
@@ -34,8 +34,13 @@ describe ('Dashboard Endpoints', function() {
       const validUser = testUsers[0];
               
       beforeEach('insert test users', () => {
-          helpers.seedUsers(db, testUsers)
+        return db
+            .into('doggouser')
+            .insert(testUsers)
+
       })
+
+
       
       beforeEach('insert dashboard spots', () => {
           return db
@@ -43,12 +48,13 @@ describe ('Dashboard Endpoints', function() {
           .insert(testDashboard)
       });
 
-      const expectedEntries = testDashboard.filter(spot => spot.user_name === validUser.user_name);
+      const expectedSpots = testDashboard.filter(spot => spot.user_name === validUser.user_name);
       
       it ('GET api/:user_name/dashboard responds 200 and with all spots saved by user', () => {
           return supertest(app)
           .get(`/${validUser}/dashboard`)
-          .expect(200, expectedEntries)
+          .set('session_token', helpers.makeAuthHeader(testUsers[0]))
+          .expect(200, expectedSpots)
       });
     })
 

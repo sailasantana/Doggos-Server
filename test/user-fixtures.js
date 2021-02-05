@@ -1,7 +1,6 @@
 function createUsersArray() { 
     return [
         {
-            id: 1,
             date_created: '2021-01-24T16:28:32.615Z',
             date_modified: '2021-01-24T16:28:32.615Z',
             first_name:'hello',
@@ -10,7 +9,6 @@ function createUsersArray() {
             password: '@FakePassword456'
         },
         {
-            id: 2,
             date_created: '2021-01-27T16:28:32.615Z',
             date_modified: '2021-01-24T16:28:32.615Z',
             first_name:'bye',
@@ -20,7 +18,6 @@ function createUsersArray() {
 
         },
         {
-            id: 3,
             date_created: '2021-01-29T16:28:32.615Z', 
             date_modified: '2021-01-24T16:28:32.615Z',
             first_name:'howdy',
