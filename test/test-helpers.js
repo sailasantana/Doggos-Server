@@ -1,14 +1,14 @@
-const bcrypt = require('bcrypt');const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const {JWT_SECRET} = require('../src/config');
-
 
 
 function makeAuthHeader(user, secret = JWT_SECRET) {
 
     const sessionObj = {
-        firstname: "user.first_nam",
-        lastName: "user_last_name",
-        username: "user_user_name"
+        firstname: user.first_name,
+        lastName: user_last_name,
+        username: user_user_name
         }
 
     const session_token = jwt.sign(
@@ -24,12 +24,7 @@ function seedUsers(db, users) {
         password: bcrypt.hashSync(user.password, 1)
     }))
     return db.into('doggoUser').insert(preppedUsers)
-        .then(() => {
-            db.raw(
-                `SELECT setval('doggoUser_id_seq), ?)`,
-                [users[users.length - 1].id]
-            )
-        })
+     
 }
 
 module.exports = { makeAuthHeader,seedUsers }

@@ -23,30 +23,29 @@ describe ('User Endpoints', function() {
 
     after('disconnect from db', () => db.destroy());
 
-    afterEach('cleanup', () => db('userDashboard').truncate());
+    afterEach('cleanup', () => db.raw('TRUNCATE TABLE userdashboard RESTART IDENTITY;'));
 
-    afterEach('cleanup', () => db('doggoUser').delete());
+    afterEach('cleanup', () => db('doggouser').delete());
 
-    describe ('POST /api/login', () => {
+    describe ('POST /api/signup', () => {
         context ('User Validation', () => {
+    
             
-            beforeEach('insert users', () => {
-                helpers.seedUsers(db, testUsers)
-            })
 
-            const requiredFields = ['user_name', 'password'];
+            const requiredFields = ['first_name', 'last_name','user_name', 'password'];
 
             requiredFields.forEach(field => {
                 const registerAttempt = {
-                    user_name: 'test user_name',
-                    password: 'test password'
+                    user_name: 'test_user_name',
+                    password: 'A@test password',
+                    first_name: 'test'
                 }
 
                 it (`Responds with 400 when required ${field} is missing`, () => {
                     delete registerAttempt[field]
 
                     return supertest(app)
-                        .post('/api/users')
+                        .post('/api/signup')
                         .send(registerAttempt)
                         .expect(400, {error: `Missing '${field}' in request body.`})
                 })
@@ -55,11 +54,13 @@ describe ('User Endpoints', function() {
             it ('Responds 400 when password is less than 8 characters', () => {
                 const shortPassword = {
                     user_name: 'test user_name',
-                    password: '1234567'
+                    password: '1234567',
+                    first_name: 'test',
+                    last_name: 'test'
                 }
 
                 return supertest(app)
-                    .post('/api/users')
+                    .post('/api/signup')
                     .send(shortPassword)
                     .expect(400, {error: `Password must be longer than 8 characters.`})
             })
@@ -67,11 +68,13 @@ describe ('User Endpoints', function() {
             it ('Responds 400 when password is less than 72', () => {
                 const longPassword = {
                     user_name: 'test user_name',
-                    password: '*'.repeat(73)
+                    password: '*'.repeat(73),
+                    first_name: 'test',
+                    last_name: 'test'
                 }
 
                 return supertest(app)
-                    .post('/api/users')
+                    .post('/api/signup')
                     .send(longPassword)
                     .expect(400, {error: `Password must be less than 72 characters.`})
             })
@@ -79,11 +82,13 @@ describe ('User Endpoints', function() {
             it ('Responds 400 when password begins with a space', () => {
                 const spacePassword = {
                     user_name: 'test user_name', 
-                    password: ' 123ses4meStreet!'
+                    password: ' 123ses4meStreet!',
+                    first_name: 'test',
+                    last_name: 'test'
                 }
 
                 return supertest(app)
-                    .post('/api/users')
+                    .post('/api/signup')
                     .send(spacePassword)
                     .expect(400, {error: `Password must not start or end with a space.`})
             })
@@ -91,11 +96,15 @@ describe ('User Endpoints', function() {
             it ('Responds 400 when password ends with a space', () => {
                 const spacePassword = {
                     user_name: 'test user_name', 
-                    password: '123ses4meStreet! '
+                    password: '123ses4meStreet! ',
+                    first_name: 'test',
+                    last_name: 'test'
+
+
                 }
 
                 return supertest(app)
-                    .post('/api/users')
+                    .post('/api/signup')
                     .send(spacePassword)
                     .expect(400, {error: `Password must not start or end with a space.`})
             })
@@ -103,73 +112,47 @@ describe ('User Endpoints', function() {
             it ('Responds 400 when password is not complex enough', () => {
                 const basicPassword = {
                     user_name: 'test user_name',
-                    password: '11AAaabb'
+                    password: '11AAaabb',
+                    first_name: 'test',
+                    last_name: 'test'
                 }
 
                 return supertest(app)
-                    .post('/api/users')
+                    .post('/api/signup')
                     .send(basicPassword)
                     .expect(400, {error: `Password must contain 1 upper case letter, lower case letter, number, and special character.`})
             })
 
-
-
-            it (`Responds 400 'User name already taken' when user_name isn't unique`, () => {
-                const duplicateUser = {
-                    user_name: testUser.user_name,
-                    password: '11AAaa!!'
-                }
-
-                return supertest(app)
-                    .post('/api/users')
-                    .send(duplicateUser)
-                    .expect(400, {error: `Username already taken.`})
-            }) 
         })
     })
 
-    describe ('Successful user POST request', () => {
-        it ('Responds 201, serializes user, and stores bcrypted password', () => {
-            const newUser = {
-                user_name: 'test user_name',
-                password: '11AAaa!!'
+    describe ('Successful user POST login request', () => {
+
+        const testUsers = createUsersArray();
+        const testUser = testUsers[0];
+                
+             
+        beforeEach('insert test users', () => {
+            helpers.seedUsers(db, testUsers)
+        })
+
+
+
+        it ('Responds 201 and generates token', () => {
+            const user = {
+                user_name: testUser.user_name,
+                password: testUser.password
             }
 
             return supertest(app)
-                .post('/api/users')
-                .send(newUser)
+                .post('/api/login')
+                .send(user)
                 .expect(201)
                 .expect(res => {
-                    expect(res.body).to.have.property('id')
-                    expect(res.body.user_name).to.eql(newUser.user_name)
-                    expect(res.body).to.not.have.property('password')
-                    expect(res.headers.location).to.eql(`/api/users/${res.body.id}`)
-
-                    const expectedDate = new Date().toLocaleString('en', {timezone: 'UTC'});
-                    const actualDate = new Date(res.body.date_created).toLocaleString();
-
-                    expect(actualDate).to.eql(expectedDate)
+                    expect(res.body).to.have.property('token')
+                
                 })
-                .expect(res => {
-                    db
-                        .from('doggouser')
-                        .select('*')
-                        .where({id: res.body.id})
-                        .first()
-                        .then(row => {
-                            expect(row.user_name).to.eql(newUser.user_name)
-
-                            const expectedDate = new Date().toLocaleString('en', {timezone: 'UTC'});
-                            const actualDate = new Date(res.body.date_created).toLocaleString();
-
-                            expect(actualDate).to.eql(expectedDate)
-
-                            return bcrypt.compare(newUser.password, row.password)
-                        })
-                        .then(compareMatch => {
-                            expect(compareMatch).to.be.true
-                        })
-                })
+              
         })
     }) 
 

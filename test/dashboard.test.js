@@ -47,43 +47,53 @@ describe ('Dashboard Endpoints', function() {
           .into('userdashboard')
           .insert(testDashboard)
       });
+      
 
       const expectedSpots = testDashboard.filter(spot => spot.user_name === validUser.user_name);
+      console.log(expectedSpots)
       
       it ('GET api/:user_name/dashboard responds 200 and with all spots saved by user', () => {
           return supertest(app)
-          .get(`/${validUser}/dashboard`)
-          .set('session_token', helpers.makeAuthHeader(testUsers[0]))
+          .get(`/api/${validUser.user_name}/dashboard`)
+          .set('session_token', helpers.makeAuthHeader(validUser))
           .expect(200, expectedSpots)
+
       });
     })
 
 
     //POST TESTS
     describe (`POST api/:user_name/dashboard`, () => {
-      this.retries(2);
-
-      const testUsers = createUsersArray();
-      const testUser = testUsers[0]
-
-      beforeEach('insert test users', () => {
-          helpers.seedUsers(db, testUsers)
-      })
-
-      beforeEach('insert seed spots into db', () => {
+        const testDashboard = createDashboardArray();
+        const testUsers = createUsersArray();
+        const testUser = testUsers[0];
+                
+        beforeEach('insert test users', () => {
           return db
-          .into('userdashboard')
-      })
+              .into('doggouser')
+              .insert(testUsers)
+  
+        })
+     
+        beforeEach('insert dashboard spots', () => {
+            return db
+            .into('userdashboard')
+            .insert(testDashboard)
+        });
+
+        after(() => db.destroy())
+
 
       const newSpot = {
           title: 'Test title',
           doggoaddress: 'Test address',
-          user_name: `${testUser}`
+          user_name: `${testUser.user_name}`
       };
 
       it ('Creates a new spot in dasboard, responds with 201', () => {
           return supertest(app)
-              .post('/:user_name/dashboard')
+              .post(`/api/${testUser.user_name}/dashboard`)
+              .set('session_token', helpers.makeAuthHeader(testUser))
               .send(newSpot)
               .expect(201)
               .expect(res => {
@@ -93,7 +103,6 @@ describe ('Dashboard Endpoints', function() {
                   expect(res.body).to.have.property('id')
                   expect(res.body).to.have.property('date_created')
                   expect(res.body).to.have.property('date_modified')
-                  expect(res.headers.location).to.eql(`/${newSpot.user_name}/dashboard`)
 
               })
            
@@ -112,24 +121,28 @@ describe ('Dashboard Endpoints', function() {
               delete newSpot[field]
 
               return supertest(app)
-                  .post(`/${testUser}/dashboard`)
+                  .post(`/api/${testUser}/dashboard`)
+                  .set('session_token', helpers.makeAuthHeader(testUser))
                   .send(newSpot)
                   .expect(400, {
-                      error: { message: `Missing '${field}' in request body.`}
+                      error: { message: `Missing ${field} in request body`}
                   })
           });
       });
 
       //DELETE TESTS
-      describe (`DELETE '/:user_name/dashboard/:id'`, () => {
+      describe (`DELETE 'api/:user_name/dashboard/:id'`, () => {
         
         context('Given there are saved spots in db', () => {
             const testDashboard = createDashboardArray();
             const testUsers = createUsersArray();
                     
             beforeEach('insert test users', () => {
-                helpers.seedUsers(db, testUsers)
-            })
+                return db
+                    .into('doggouser')
+                    .insert(testUsers)
+        
+              })
             
             beforeEach('insert saved spots', () => {
                 return db
@@ -144,14 +157,17 @@ describe ('Dashboard Endpoints', function() {
                 const expectedEntries = testDashbaord.filter(spot => spot.id !== idToDelete);
 
                 return supertest(app)
-                    .delete(`/${testUser}/dashboard/${idToDelete}`)
+                    .delete(`/api/${testUser.user_name}/dashboard/${idToDelete}`)
+                    .set('session_token', helpers.makeAuthHeader(testUser))
                     .expect(204)
                     .then(res => {
                         supertest(app)
-                            .get(`/${testUser}/dashboard`)
+                            .get(`/api/${testUser.user_name}/dashboard`)
                             .expect(expectedEntries)
                     });
             });
+
+
         });
     });
 

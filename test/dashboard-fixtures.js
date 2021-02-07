@@ -3,20 +3,20 @@ function createDashboardArray() {
 
     return [
         {
-            id: 1,
-            date_created: '2020-01-22T16:28:32.615Z',
-            date_modified:'2020-01-22T16:28:32.615Z',
-            title: 'ABC',
-            doggoaddress: 'Lorem ipsum St',
-            user_name: 'hello456'
+            "date_created": "2020-01-22T16:28:32.615Z",
+            "date_modified":"2020-01-22T16:28:32.615Z",
+            "doggoaddress": "Lorem ipsum St",
+            "id": 5,
+            "title": "ABC",
+            "user_name": "hello456"
         },
         {
-            id: 2,
-            date_created: '2020-01-22T16:28:32.615Z',
-            date_modified: '2020-01-22T16:28:32.615Z',
-            title: 'DEF',
-            doggoaddress: 'Velit laoreet st',
-            user_name: 'hello456'
+            "date_created": "2020-01-22T16:28:32.615Z",
+            "date_modified": "2020-01-22T16:28:32.615Z",
+            "doggoaddress": "Velit laoreet st",
+            "id": 6,
+            "title": "DEF",
+            "user_name": "hello456"
         }
     ] 
 

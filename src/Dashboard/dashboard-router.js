@@ -23,6 +23,7 @@ DashboardRouter
 
         )
         .then( dashboard => {
+            console.log(dashboard)
             return res.status(200).json(dashboard)
         })
         .catch(next);

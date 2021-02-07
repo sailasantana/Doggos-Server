@@ -54,30 +54,6 @@ LoginRouter
 
 })
 
-/* Moved to middleware */
-// LoginRouter
-//     .route('/validate')
-//     .get( (req,res) => {
-//         const { session_token } = req.headers;
-
-//         jwt.verify(session_token, 'secret', (err, tokenDecoded) => {
-//             if(err){
-//             res.statusMessage = "Not Authoried"
-//             res.status(401).end()
-//         }
-//         else{
-//             console.log( tokenDecoded )
-
-//             //req.tokenDecoded = tokenDecoded
-//             //you need a next here instead of 73-74
-//             return res.status(200).json({
-//                 message : 'Welcome back ${tokenDecoded.firstName}!'
-//             })
-//         }
-//     })
-//     })
-
-
  LoginRouter
     .route('/signup')
     .post(bodyParser, (req,res,next) => {
