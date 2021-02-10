@@ -7,8 +7,8 @@ function makeAuthHeader(user, secret = JWT_SECRET) {
 
     const sessionObj = {
         firstname: user.first_name,
-        lastName: user_last_name,
-        username: user_user_name
+        lastName: user.last_name,
+        username: user.user_name
         }
 
     const session_token = jwt.sign(
@@ -23,7 +23,7 @@ function seedUsers(db, users) {
         ...user,
         password: bcrypt.hashSync(user.password, 1)
     }))
-    return db.into('doggoUser').insert(preppedUsers)
+    return db.into('doggouser').insert(preppedUsers)
      
 }
 

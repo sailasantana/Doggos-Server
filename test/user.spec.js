@@ -133,7 +133,7 @@ describe ('User Endpoints', function() {
                 
              
         beforeEach('insert test users', () => {
-            helpers.seedUsers(db, testUsers)
+           return helpers.seedUsers(db, testUsers)
         })
 
 
