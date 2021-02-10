@@ -38,7 +38,7 @@ LoginRouter
                 if(result){
                     jwt.sign(sessionObj, 'secret', {expiresIn : '15m'}, (err, token) => {
                         if(!err){
-                            return res.status(200).json({token})
+                            return res.status(201).json({token})
                         }
                         else {
                           res.statusMessage = "Something went wrong with token generation"
@@ -53,6 +53,25 @@ LoginRouter
      .catch(next)
 
 })
+
+LoginRouter
+    .route('/validate')
+    .get(( req, res ) => {
+        const { session_token } = req.headers;
+        console.log( req.headers );
+        jwt.verify( session_token, 'secret', ( err, tokenDecoded ) => {
+            if( err ){
+                res.statusMessage = "Not authorized.";
+                return res.status( 401 ).end();
+            }
+            else{
+                console.log( tokenDecoded );
+                return res.status( 200 ).json({
+                    message : `Welcome back ${tokenDecoded.firstName} ${tokenDecoded.lastName}!`
+                });
+            }
+        });
+    });
 
  LoginRouter
     .route('/signup')

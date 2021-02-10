@@ -4,9 +4,6 @@ const bodyParser = express.json()
 const fetch = require('node-fetch')
 const zipcodes = require('zipcodes')
 
-// zip = 'a'
-// let example = zipcodes.lookup(zip)
-// console.log(example)
 
 function formatQueryParams(params){
     const queryItems = Object.keys(params)
