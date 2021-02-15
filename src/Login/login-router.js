@@ -36,7 +36,7 @@ LoginRouter
         bcrypt.compare(password, result.password)
             .then( result => {
                 if(result){
-                    jwt.sign(sessionObj, 'secret', {expiresIn : '15m'}, (err, token) => {
+                    jwt.sign(sessionObj, 'secret', {expiresIn : '75m'}, (err, token) => {
                         if(!err){
                             return res.status(201).json({token})
                         }
