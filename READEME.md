@@ -29,6 +29,29 @@ Landing page:
 ![Recommend](screenshots/recommend.png)
 
 
+# API Endpoints
+
+## Users and Authentication
+
+### POST
+- /api/login (login)
+- /api/signup (sign Up)
+
+## Search
+
+### POST
+- /api/search (doggoSearch - requests to Google Places and Places Details API)
+
+## Dashboard
+
+### GET
+- /api/:username/dashboard (gets user's saved searches)
+
+### DELETE
+- /api/:username/dashboard/:id (deletes a saved spot from user's dashboard)
+
+
+
 
 # Environment Set Up
 
