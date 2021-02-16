@@ -4,6 +4,8 @@
 
 An app that helps you discover dog-friendly activities across any zip code in the U.S!
 
+Live : https://doggoswelcome.sailasantana.vercel.app/
+
 # Features
 
 * Search that allows user to find bars, dog parks, trails, brunch spots and much more through zip code and type of activtiy user inputs.
